@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap-select.min.css" />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container" style="padding: 3rem 0">
+      <form action="">
+        <div class="row first-info d-flex">
+          <div class="col-sm-12">
+            <h4 style="font-weight: bold;">Information</h4>
+          </div>
+          <div class="col-sm-12">
+            <hr />
+          </div>
+          <div class="col-sm-12 mb-4">
+            <label for=""
+              >What type of accommodation would you like to add?</label
+            >
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <div class="form-control">
+                  <input
+                    class="d-none"
+                    name="accomodationType"
+                    id="sharedRoom"
+                    type="radio"
+                    checked
+                  />
+                  <label for="sharedRoom">
+                    Shared room
+                    <span class="control-indicator"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <div class="form-control">
+                  <input
+                    class="d-none"
+                    name="accomodationType"
+                    id="privateRoom"
+                    type="radio"
+                  />
+                  <label for="privateRoom">
+                    Private room
+                    <span class="control-indicator"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <div class="form-control">
+                  <input
+                    class="d-none"
+                    name="accomodationType"
+                    id="entireRoom"
+                    type="radio"
+                  />
+                  <label for="entireRoom">
+                    Entire accomodation
+                    <span class="control-indicator"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 mb-4">
+            <label for="">Title*</label>
+            <input type="text" class="form-control" placeholder="Enter title" />
+          </div>
+          <div class="col-sm-12 mb-4">
+            <label for="">Description</label>
+            <textarea name="editor1" class="w-100 d-block" style="height: 0;">
+            </textarea>
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Type of news</label>
+            <div class="btn-group bootstrap-select d-block w-100">
+              <select
+                id="homey_listing_mode"
+                class="selectpicker w-100"
+                data-live-search="false"
+                data-live-search-style="begins"
+                title=""
+                tabindex="-98"
+              >
+                <option value="">
+                  <font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >To select</font
+                    ></font
+                  >
+                </option>
+                <option value="per_day">
+                  <font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit">By night</font></font
+                  >
+                </option>
+                <option value="per_week">
+                  <font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit">Per Week</font></font
+                  >
+                </option>
+                <option value="per_month">
+                  <font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >Per Month</font
+                    ></font
+                  >
+                </option>
+                <option value="per_hour">
+                  <font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit">Per hour</font></font
+                  >
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">number of rooms</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the number of bedrooms"
+            />
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Number of travelers</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the number of travelers"
+            />
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Number of beds</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the number of beds"
+            />
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Number of bathrooms</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the number of bathrooms"
+            />
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Number of pieces</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the number of pieces"
+            />
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Cut</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the size. Just numbers"
+            />
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Unit of measure</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the unit of measure. Example m²"
+            />
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Housing Type</label>
+            <div class="btn-group bootstrap-select d-block w-100">
+              <select
+                id="housing_type"
+                class="selectpicker w-100"
+                data-live-search="false"
+                data-live-search-style="begins"
+                title=""
+                tabindex="-98"
+              >
+                <option value="">Any</option>
+                <option value="per_day">Principle residence</option>
+                <option value="per_week">Second home</option>
+                <option value="per_month">Hotel & guest room</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">License number</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the short-term furnished rental number"
+            />
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Security deposit</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Please indicate the deposit upon arrival of the client"
+            />
+          </div>
+          <div class="steps-nav col-sm-12">
+            <button
+              id="save_as_draft"
+              type="button"
+              class="btn btn-grey-outlined btn-xs-full-width"
+            >
+              Save as draft
+            </button>
+            <button
+              type="button"
+              class="btn btn-success btn-step-next btn-xs-full-width action"
+              onclick="showSecond()"
+            >
+              To continue
+            </button>
+          </div>
+        </div>
+        <div class="row second-info d-none align-items-end">
+          <div class="col-sm-12">
+            <h4 style="font-weight: bold;">Rate</h4>
+          </div>
+          <div class="col-sm-12">
+            <hr />
+          </div>
+          <div class="col-sm-12 mb-4">
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="">By night*</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter the price per night"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Weekends</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the price per night"
+            />
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Select the billing day during the weekend</label>
+            <div class="btn-group bootstrap-select d-block w-100">
+              <select
+                id="homey_listing_mode"
+                class="selectpicker w-100"
+                data-live-search="false"
+                data-live-search-style="begins"
+                title=""
+                tabindex="-98"
+              >
+                <option value="">
+                  <font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >To select</font
+                    ></font
+                  >
+                </option>
+                <option value="per_day">Saturday and Sunday</option>
+                <option value="per_week">Friday and Saturday</option>
+                <option value="per_month">
+                  <font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >Per Month</font
+                    ></font
+                  >
+                </option>
+                <option value="per_hour">
+                  <font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit">Per hour</font></font
+                  >
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <hr />
+          </div>
+          <div class="col-sm-12 mb-4">
+            <h4 style="font-weight: 600">Long term pricing</h4>
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Weekly stay</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the unit price of a single day"
+            />
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Monthly stay</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the unit price of a single day"
+            />
+          </div>
+          <div class="col-sm-12">
+            <hr />
+          </div>
+          <div class="col-sm-12 mb-4">
+            <h4 style="font-weight: 600">
+              Configuring the price of additional services
+            </h4>
+
+            <div class="custom-extra-prices">
+              <div class="extra-price-container">
+                <div class="row myExtraPrices">
+                  <div class="col-md-4 mb-3">
+                    <label for="">Last name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter the name of the service"
+                    />
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="">Price</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter the name of the service"
+                    />
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="">Type</label>
+                    <div class="btn-group bootstrap-select d-block w-100">
+                      <select
+                        id="homey_listing_mode"
+                        class="selectpicker w-100"
+                        data-live-search="false"
+                        data-live-search-style="begins"
+                        title=""
+                        tabindex="-98"
+                      >
+                        <option value="">One-off costs</option>
+                        <option value="per_month">By night</option>
+                        <option value="per_hour">By guest</option>
+                        <option value="per_hour">Per night and guest</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row deleteRowContainer">
+                  <div class="col-sm-12 mb-4">
+                    <button
+                      class="btn btn-slim btn-primary"
+                      type="button"
+                      onclick="deleteRow()"
+                    >
+                      To Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 text-right mb-4">
+                <button
+                  class="btn btn-slim btn-primary"
+                  type="button"
+                  onclick="addRow()"
+                >
+                  + Add More
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            <hr />
+          </div>
+          <div class="col-sm-12 mb-4">
+            <h4 style="font-weight: 600">Additional Costs</h4>
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Allow additional travelers</label>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-control">
+                  <input
+                    class="d-none"
+                    name="additionalTravelers"
+                    id="additionYes"
+                    type="radio"
+                    checked
+                  />
+                  <label for="additionYes">
+                    Yes
+                    <span class="control-indicator"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="form-control">
+                  <input
+                    class="d-none"
+                    name="additionalTravelers"
+                    id="additionNo"
+                    type="radio"
+                  />
+                  <label for="additionNo">
+                    No
+                    <span class="control-indicator"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mb-4">
+            <label for="">Additional travelers</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the price of an additional traveler"
+            />
+          </div>
+          <div class="col-sm-3 mb-4">
+            <label for="">No of guests</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Number of additional guests"
+            />
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Cleaning fee</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the price of cleaning fee"
+            />
+          </div>
+          <div class="col-sm-3 mb-4">
+            <label for="">&nbsp;</label>
+            <div class="form-control">
+              <input
+                class="d-none"
+                name="cleaningFee"
+                id="perDay"
+                type="radio"
+                checked
+              />
+              <label for="perDay">
+                Per day
+                <span class="control-indicator"></span>
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-3 mb-4">
+            <label for="">&nbsp;</label>
+            <div class="form-control">
+              <input
+                class="d-none"
+                name="cleaningFee"
+                id="perStay"
+                type="radio"
+              />
+              <label for="perStay">
+                Per stay
+                <span class="control-indicator"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="col-sm-6 mb-4">
+            <label for="">Tourist Tax</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the price of city fee"
+            />
+          </div>
+          <div class="col-sm-3 mb-4">
+            <label for="">&nbsp;</label>
+            <div class="form-control">
+              <input
+                class="d-none"
+                name="cityFee"
+                id="cityFeePerDay"
+                type="radio"
+              />
+              <label for="cityFeePerDay">
+                Per day
+                <span class="control-indicator"></span>
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-3 mb-4">
+            <label for="">&nbsp;</label>
+            <div class="form-control">
+              <input
+                class="d-none"
+                name="cityFee"
+                id="cityFeePerStay"
+                type="radio"
+                checked
+              />
+              <label for="cityFeePerStay">
+                Per stay
+                <span class="control-indicator"></span>
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Security deposit</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the price of security deposit"
+            />
+          </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Percentage of tax</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Enter the tax percentage (number only)"
+            />
+          </div>
+          <div class="steps-nav col-sm-12">
+            <div>
+              <button
+                id="save_as_draft"
+                type="button"
+                class="btn btn-grey-outlined btn-xs-full-width"
+                onclick="showFirst()"
+              >
+                Return
+              </button>
+              <button
+                id="save_as_draft"
+                type="button"
+                class="btn btn-grey-outlined btn-xs-full-width"
+              >
+                Save as draft
+              </button>
+            </div>
+            <button
+              type="button"
+              class="btn btn-success btn-step-next btn-xs-full-width action"
+            >
+              To continue
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- template for extraprices -->
+    <div class="row myExtraPricesTemplate" style="display: none">
+      <div class="col-md-4 mb-3">
+        <label for="">Last name</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter the name of the service"
+        />
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="">Price</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter the name of the service"
+        />
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="">Type</label>
+        <div class="btn-group bootstrap-select d-block w-100">
+          <select
+            id="homey_listing_mode"
+            class="selectpicker w-100"
+            data-live-search="false"
+            data-live-search-style="begins"
+            title=""
+            tabindex="-98"
+          >
+            <option value="">One-off costs</option>
+            <option value="per_month">By night</option>
+            <option value="per_hour">By guest</option>
+            <option value="per_hour">Per night and guest</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/bootstrap-select.min.js"></script>
+
+    <script src="./assets/ckeditor/ckeditor.js"></script>
+
+    <script>
+      CKEDITOR.replace('editor1')
+    </script>
+
+    <script>
+      function deleteRow() {
+        $(".myExtraPrices").first(".row").remove();
+      }
+
+      function addRow() {
+        if ($(".myExtraPrices").length > 0) {
+          $(".myExtraPrices:last").clone().insertBefore(".deleteRowContainer");
+        } else {
+          $(".myExtraPricesTemplate")
+            .clone()
+            .insertBefore(".deleteRowContainer")
+            .removeClass("myExtraPricesTemplate")
+            .addClass("myExtraPrices")
+            .css("display", "block");
+        }
+      }
+
+      function showFirst() {
+        $(".second-info").removeClass("d-flex").addClass("d-none");
+        $(".first-info").removeClass("d-none").addClass("d-flex");
+        window.scrollTo(0, 0, 'slow');
+      }
+
+      function showSecond() {
+        $(".first-info").removeClass("d-flex").addClass("d-none");
+        $(".second-info").removeClass("d-none").addClass("d-flex");
+        window.scrollTo(0, 0, 'slow');
+      }
+    </script>
+
+    <script>
+      $("#housing_type").selectpicker({
+        liveSearch: true,
+      });
+    </script>
+  </body>
+</html>

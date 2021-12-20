@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-select.min.css" />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container" style="padding-top: 3rem">
+      <form action="">
+        <div class="row">
+          <div class="col-sm-12 mb-4">
+            <label for="">Select the billing day during the weekend</label>
+            <div class="btn-group bootstrap-select d-block w-100">
+              <select
+                id="homey_listing_mode"
+                class="selectpicker w-100"
+                data-live-search="false"
+                data-live-search-style="begins"
+                title=""
+                tabindex="-98"
+              >
+                <option value="">
+                  To select
+                </option>
+                <option value="per_day">By night</option>
+                <option value="per_week">Per Week</option>
+                <option value="per_month">
+                  Per Month
+                </option>
+                <option value="per_hour">
+                  Per Hour
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/bootstrap-select.min.js"></script>
+  </body>
+</html>

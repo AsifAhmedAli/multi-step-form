@@ -1,0 +1,319 @@
+/* Google font */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+
+body * {
+  font-family: "Quicksand", sans-serif;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.bootstrap-select.btn-group .dropdown-menu a:hover,
+.daterangepicker td.active:hover,
+.daterangepicker td.available:hover,
+.daterangepicker th.available:hover,
+.custom-actions .btn-action:hover,
+.calendar-table .prev:hover,
+.calendar-table .next:hover,
+.btn-secondary-outlined:hover,
+.btn-secondary-outlined:active,
+.btn-preview-listing:hover,
+.btn-preview-listing:active,
+.btn-preview-listing:focus,
+.btn-action:hover,
+.btn-action:active,
+.btn-action:focus {
+  background-color: #7ed2e2;
+}
+
+.bootstrap-select .btn:focus,
+.bootstrap-select .btn:active {
+  border-color: #7ed2e2 !important;
+}
+
+body,
+.fc button,
+.pagination > li > a,
+.pagination > li > span,
+.item-title-head .title a,
+.sidebar .widget .review-block .title a,
+.sidebar .widget .comment-block .title a,
+.adults-calculator .quantity-calculator input[disbaled],
+.children-calculator .quantity-calculator input[disbaled],
+.nav-tabs > li > a,
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.modal-login-form .forgot-password-text a,
+.modal-login-form .checkbox a,
+.bootstrap-select.btn-group .dropdown-menu a,
+.header-nav .social-icons a,
+.header-nav .crncy-lang-block > li span,
+.header-comp-logo h1,
+.item-list-view .item-user-image,
+.item-title-head .title a,
+.control,
+.blog-wrap h2 a,
+.banner-caption-side-search .banner-title,
+.banner-caption-side-search .banner-subtitle,
+.widget_categories select,
+.widget_archive select,
+.woocommerce ul.products li.product .price,
+.woocommerce div.product p.price,
+.woocommerce div.product span.price,
+.woocommerce #reviews #comments ol.commentlist li .meta,
+.woocommerce-MyAccount-navigation ul li a {
+  color: #3b4249;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.form-control,
+.wpcf7-form-control,
+.wp-block-search input,
+.post-password-form input[type="password"],
+.searchform input {
+  height: 42px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 0 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-control,
+.wpcf7-form-control,
+.wp-block-search input,
+.post-password-form input[type="password"],
+.searchform input,
+.bootstrap-select .btn,
+.bootstrap-select .wpcf7-submit,
+.bootstrap-select .gform_wrapper .button,
+.gform_wrapper .bootstrap-select .button,
+.bootstrap-select .gform_button {
+  border-color: #d8dce1;
+  color: #4f5962;
+}
+
+.form-control,
+.wpcf7-form-control,
+.wp-block-search input,
+.post-password-form input[type="password"],
+.searchform input,
+.bootstrap-select .btn,
+.bootstrap-select .wpcf7-submit,
+.bootstrap-select .gform_wrapper .button,
+.gform_wrapper .bootstrap-select .button,
+.bootstrap-select .gform_button,
+.guest-select-wrap .btn,
+.guest-select-wrap .wpcf7-submit,
+.guest-select-wrap .gform_wrapper .button,
+.gform_wrapper .guest-select-wrap .button,
+.guest-select-wrap .gform_button,
+.search-filter-btn,
+.control {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.btn-grey-outlined {
+  color: #949ca5;
+  background-color: transparent;
+  border-color: #d8dce1;
+}
+
+.steps-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button,
+button:active,
+button:focus {
+  outline: none !important;
+}
+
+.btn,
+.wpcf7-submit,
+.gform_wrapper .button,
+.gform_button,
+.wp-block-button__link,
+.wp-block-file .wp-block-file__button {
+  font-weight: 700;
+  line-height: 40px;
+  padding: 0 30px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.align-items-end {
+  align-items: flex-end !important;
+}
+
+input[type="radio"] + label {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+input[type="radio"] + label .control-indicator {
+  position: absolute;
+  right: 0;
+  min-width: 20px;
+  content: "";
+  width: 20px !important;
+  height: 20px !important;
+  border: 1px solid #d8dce1;
+  border-radius: 50%;
+}
+
+input[type="radio"] + label .control-indicator::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 6px;
+  content: "";
+  width: 6px !important;
+  height: 6px !important;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: white;
+}
+
+input[type="radio"]:checked + label {
+  color: #2aa1c0;
+}
+
+input[type="radio"]:checked + label .control-indicator {
+  background-color: #7ed2e2;
+  border-color: #54c4d9;
+}
+
+.custom-extra-prices {
+  padding: 30px;
+  border-radius: 6px;
+  border: 1px solid #d8dce1;
+  padding: 30px 30px 10px;
+  margin-bottom: 20px;
+  background-color: #f7f8f9;
+}
+
+.bootstrap-select.btn-group .dropdown-menu a {
+  padding: 14px 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.bootstrap-select .btn {
+  padding: 0 12px;
+}
+
+.bootstrap-select .dropdown-toggle:focus,
+.bootstrap-select > select.mobile-device:focus + .dropdown-toggle {
+  outline: none !important;
+}
+
+.bootstrap-select .dropdown-toggle:focus,
+.bootstrap-select .dropdown-toggle:active {
+  box-shadow: none;
+  background-color: white;
+}
+
+.btn-default.active.focus,
+.btn-default.active:focus,
+.btn-default.active:hover,
+.btn-default:active.focus,
+.btn-default:active:focus,
+.btn-default:active:hover,
+.open > .btn-default.dropdown-toggle.focus,
+.open > .btn-default.dropdown-toggle:focus,
+.open > .btn-default.dropdown-toggle:hover {
+  background-color: white !important;
+  box-shadow: none;
+  border-color: #66afe9;
+}
+
+.btn-default.active,
+.btn-default:active,
+.open > .btn-default.dropdown-toggle {
+  background-color: white;
+  box-shadow: none;
+}
+
+.btn-primary,
+.post-password-form input[type="submit"],
+.wpcf7-submit,
+.gform_wrapper .button,
+.gform_button {
+  color: #ffffff;
+  background-color: #7fe28a;
+  border-color: #7fe28a;
+}
+
+.btn-primary:hover,
+.post-password-form input[type="submit"]:hover,
+.wpcf7-submit:hover,
+.gform_wrapper .button,
+.gform_button:hover {
+  color: #ffffff;
+  background-color: #4f8e5a;
+  border-color: #4f8e5a;
+}
+
+.btn-primary:focus,
+.btn-primary:active:focus,
+.post-password-form input[type="submit"]:focus,
+.post-password-form input[type="submit"]:active:focus,
+.wpcf7-submit:focus,
+.wpcf7-submit:active:focus,
+.gform_wrapper .button,
+.gform_button:focus,
+.gform_wrapper .button,
+.gform_button:active:focus {
+  color: #ffffff;
+  background-color: #7fe28a;
+  border-color: #7fe28a;
+}
+
+.btn-slim {
+  line-height: 25px;
+  padding: 0 10px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover {
+  background-color: #7fe28a;
+}

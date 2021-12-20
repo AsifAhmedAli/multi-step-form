@@ -17,7 +17,7 @@
       <form action="">
         <div class="row first-info d-flex">
           <div class="col-sm-12">
-            <h4 style="font-weight: bold;">Information</h4>
+            <h4 style="font-weight: bold">Information</h4>
           </div>
           <div class="col-sm-12">
             <hr />
@@ -80,7 +80,7 @@
           </div>
           <div class="col-sm-12 mb-4">
             <label for="">Description</label>
-            <textarea name="editor1" class="w-100 d-block" style="height: 0;">
+            <textarea name="editor1" class="w-100 d-block" style="height: 0">
             </textarea>
           </div>
           <div class="col-sm-6 mb-4">
@@ -216,6 +216,16 @@
               placeholder="Please indicate the deposit upon arrival of the client"
             />
           </div>
+          <div class="col-sm-6 mb-4">
+            <label for="">Attach files</label>
+            <input
+              type="file"
+              name=""
+              id="files"
+              multiple
+              class="form-control"
+            />
+          </div>
           <div class="steps-nav col-sm-12">
             <button
               id="save_as_draft"
@@ -235,7 +245,7 @@
         </div>
         <div class="row second-info d-none align-items-end">
           <div class="col-sm-12">
-            <h4 style="font-weight: bold;">Rate</h4>
+            <h4 style="font-weight: bold">Rate</h4>
           </div>
           <div class="col-sm-12">
             <hr />
@@ -617,7 +627,7 @@
     <script src="./assets/ckeditor/ckeditor.js"></script>
 
     <script>
-      CKEDITOR.replace('editor1')
+      CKEDITOR.replace("editor1");
     </script>
 
     <script>
@@ -641,19 +651,31 @@
       function showFirst() {
         $(".second-info").removeClass("d-flex").addClass("d-none");
         $(".first-info").removeClass("d-none").addClass("d-flex");
-        window.scrollTo(0, 0, 'slow');
+        window.scrollTo(0, 0, "slow");
       }
 
       function showSecond() {
         $(".first-info").removeClass("d-flex").addClass("d-none");
         $(".second-info").removeClass("d-none").addClass("d-flex");
-        window.scrollTo(0, 0, 'slow');
+        window.scrollTo(0, 0, "slow");
       }
     </script>
 
     <script>
       $("#housing_type").selectpicker({
         liveSearch: true,
+      });
+    </script>
+
+    <script>
+      $(function () {
+        $("input[type = 'file']").change(function () {
+          var $fileUpload = $("input[type='file']");
+          if (parseInt($fileUpload.get(0).files.length) > 14) {
+            alert("You are only allowed to upload a maximum of 15 files");
+            $fileUpload.val('')
+          }
+        });
       });
     </script>
   </body>

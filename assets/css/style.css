@@ -1,6 +1,11 @@
 /* Google font */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 
+body,
+.bg-body {
+  background-color: #f7f8f9 !important;
+}
+
 body * {
   font-family: "Quicksand", sans-serif;
 }
@@ -349,7 +354,7 @@ input[type="file"].form-control {
   box-shadow: -10px 10px 0 #949ca5;
 }
 
-.attachFiles input[type=file]{
+.attachFiles input[type="file"] {
   opacity: 0;
   position: absolute;
   top: 0;
@@ -360,14 +365,14 @@ input[type="file"].form-control {
   z-index: 0;
 }
 
-.thumb-container .thumb-image{
+.thumb-container .thumb-image {
   min-height: 150px;
   height: 150px;
   object-fit: cover;
   object-position: top center;
 }
 
-.thumb-container .thumb-actions{
+.thumb-container .thumb-actions {
   background-color: #f7f8f9;
   display: flex;
   align-items: center;
@@ -375,10 +380,50 @@ input[type="file"].form-control {
 }
 
 .thumb-container .thumb-actions button,
-.thumb-container .thumb-actions a{
+.thumb-container .thumb-actions a {
   background-color: transparent;
   border: none;
   outline: none;
   padding: 4px 0 2px 0;
   text-decoration: none;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.p-3 {
+  padding: 3rem !important;
+}
+
+.form-control.error,
+.error.wpcf7-form-control,
+.wp-block-search input.error,
+.post-password-form input.error[type="password"],
+.searchform input.error {
+  border-color: #c31b1b;
+  background-color: #f6c8c8;
+}
+
+.form-control.valid,
+.valid.wpcf7-form-control,
+.wp-block-search input.valid,
+.post-password-form input.valid[type="password"],
+.searchform input.valid {
+  border-color: #7ed321;
+  background-color: #ebf3e1;
+}
+
+
+.myFormCheck input[type=checkbox]{
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.myFormCheck label{
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: bottom;
 }

@@ -791,7 +791,7 @@
             </div>
           </div>
 
-          <div class="row" id="charac">
+          <div class="row" id="charac" style="display: none">
             <div class="col-sm-12">
               <h4 style="font-weight: bold">Characteristics</h4>
             </div>
@@ -1284,9 +1284,36 @@
                 </div>
               </div>
             </div>
+
+            <div class="steps-nav col-sm-12">
+              <div>
+                <button
+                  id="save_as_draft"
+                  type="button"
+                  class="btn btn-grey-outlined btn-xs-full-width"
+                  onclick="showFileUpload()"
+                >
+                  Return
+                </button>
+                <button
+                  id="save_as_draft"
+                  type="button"
+                  class="btn btn-grey-outlined btn-xs-full-width"
+                >
+                  Save as draft
+                </button>
+              </div>
+              <button
+                type="button"
+                class="btn btn-success btn-step-next btn-xs-full-width action"
+                onclick="showLocation()"
+              >
+                To continue
+              </button>
+            </div>
           </div>
 
-          <div class="row" id="location">
+          <div class="row" id="location" style="display: none">
             <div class="col-sm-12">
               <h4 style="font-weight: bold">Location</h4>
             </div>
@@ -1301,7 +1328,7 @@
                 placeholder="Enter address"
               />
             </div>
-            <div class="col-lg-3 mb-4">
+            <div class="col-lg-4 mb-4">
               <label for="">Apt, Suite (Optional)</label>
               <input
                 type="text"
@@ -1309,7 +1336,7 @@
                 placeholder="Enter the apartment / suite number (Ex. # 123)"
               />
             </div>
-            <div class="col-lg-3 mb-4">
+            <div class="col-lg-4 mb-4">
               <label for="">City*</label>
               <input
                 type="text"
@@ -1317,7 +1344,7 @@
                 placeholder="Enter the city"
               />
             </div>
-            <div class="col-lg-3 mb-4">
+            <div class="col-lg-4 mb-4">
               <label for="">Department</label>
               <input
                 type="text"
@@ -1325,7 +1352,7 @@
                 placeholder="Enter the apartment"
               />
             </div>
-            <div class="col-lg-3 mb-4">
+            <div class="col-lg-4 mb-4">
               <label for="">Postal code</label>
               <input
                 type="text"
@@ -1363,100 +1390,364 @@
               <label for="">Find the address on the map</label>
             </div>
             <div class="col-lg-4 mb-4">
-              <input type="text" class="form-control" placeholder="Latitude">
+              <input type="text" class="form-control" placeholder="Latitude" />
             </div>
             <div class="col-lg-4 mb-4">
-              <input type="text" class="form-control" placeholder="Longitude">
+              <input type="text" class="form-control" placeholder="Longitude" />
             </div>
             <div class="col-lg-4 mb-4">
-              <button class="btn d-block w-100" style="background-color: #7fe28a;color: white;">Find the address</button>
+              <button
+                class="btn d-block w-100"
+                style="background-color: #7fe28a; color: white"
+              >
+                Find the address
+              </button>
+            </div>
+            <div class="steps-nav col-sm-12">
+              <div>
+                <button
+                  id="save_as_draft"
+                  type="button"
+                  class="btn btn-grey-outlined btn-xs-full-width"
+                  onclick="showLocationCharac()"
+                >
+                  Return
+                </button>
+                <button
+                  id="save_as_draft"
+                  type="button"
+                  class="btn btn-grey-outlined btn-xs-full-width"
+                >
+                  Save as draft
+                </button>
+              </div>
+              <button
+                type="button"
+                class="btn btn-success btn-step-next btn-xs-full-width action"
+                onclick="showBedroomsCharac()"
+              >
+                To continue
+              </button>
             </div>
           </div>
 
-          <div class="row" id="bedrooms">
+          <div class="row" id="bedrooms" style="display: none">
             <div class="col-sm-12">
               <h4 style="font-weight: bold">Bedrooms</h4>
             </div>
             <div class="col-sm-12">
               <hr />
             </div>
-            <div class="col-lg-6 mb-4">
-              <label for="">Room name</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Ex: Master bedroom or Bedroom 1 "
-              />
-            </div>
-            <div class="col-lg-6 mb-4">
-              <label for="">Number of travelers</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Enter the apartment / suite number (Ex. # 123)"
-              />
+            <div class="col-sm-12">
+              <div class="row" id="singleRoomInfo">
+                <div class="col-lg-6 mb-4">
+                  <label for="">Room name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Ex: Master bedroom or Bedroom 1 "
+                  />
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <label for="">Number of travelers</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter the number of travelers in this room"
+                  />
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <label for="">Number of beds</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter the number of beds"
+                  />
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <label for="">Number of travelers</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter the type of bed"
+                  />
+                </div>
+              </div>
             </div>
             <div class="col-lg-3 mb-4">
-              <label for="">City*</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Enter the city"
-              />
+              <button
+                class="btn d-block w-100"
+                style="background-color: #7fe28a; color: white"
+                onclick="deleteRoomRow()"
+                type="button"
+              >
+                Delete this room
+              </button>
             </div>
-            <div class="col-lg-3 mb-4">
-              <label for="">Department</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Enter the apartment"
-              />
+            <div class="col-sm-12 mb-4" style="text-align: right;">
+              <button
+                class="btn"
+                style="background-color: #7fe28a; color: white"
+                type="button"
+              >
+                + Add a new room
+              </button>
             </div>
-            <div class="col-lg-3 mb-4">
-              <label for="">Postal code</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Enter the postal code"
-              />
+            <div class="steps-nav col-sm-12">
+              <div>
+                <button
+                  id="save_as_draft"
+                  type="button"
+                  class="btn btn-grey-outlined btn-xs-full-width"
+                  onclick="showLocationBedrooms()"
+                >
+                  Return
+                </button>
+                <button
+                  id="save_as_draft"
+                  type="button"
+                  class="btn btn-grey-outlined btn-xs-full-width"
+                >
+                  Save as draft
+                </button>
+              </div>
+              <button
+                type="button"
+                class="btn btn-success btn-step-next btn-xs-full-width action"
+                onclick="showBedroomsRules()"
+              >
+                To continue
+              </button>
             </div>
-            <div class="col-lg-6 mb-4">
-              <label for="">Region*</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Enter the region"
-              />
-            </div>
-            <div class="col-lg-6 mb-4">
-              <label for="">Country</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Enter the country"
-              />
-            </div>
-            <div class="col-sm-12 mb-4">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60949550.79698232!2d95.47468769797501!3d-21.189562525113576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2b2bfd076787c5df%3A0x538267a1955b1352!2sAustralia!5e0!3m2!1sen!2s!4v1640274606669!5m2!1sen!2s"
-                width="100%"
-                height="350"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
+          </div>
+
+          <div class="row" id="rules" style="display: none">
+            <div class="col-sm-12">
+              <h4 style="font-weight: bold">Conditions and rules</h4>
             </div>
             <div class="col-sm-12">
-              <label for="">Find the address on the map</label>
+              <hr />
             </div>
-            <div class="col-lg-4 mb-4">
-              <input type="text" class="form-control" placeholder="Latitude">
+            <div class="col-sm-12 mb-4">
+              <label for="">Cancellation policy</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter cancellation policy"
+              />
             </div>
-            <div class="col-lg-4 mb-4">
-              <input type="text" class="form-control" placeholder="Longitude">
+            <div class="col-md-6 mb-4">
+              <label for="">Minimum number of days to book</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter the minimum number of days to reserve (Number only)"
+              />
             </div>
-            <div class="col-lg-4 mb-4">
-              <button class="btn d-block w-100" style="background-color: #7fe28a;color: white;">Find the address</button>
+            <div class="col-md-6 mb-4">
+              <label for="">Maximum number of days to reserve</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter the maximum number of days to reserve (Number only)"
+              />
+            </div>
+            <div class="col-md-6 mb-4">
+              <label for="">Arrive after</label>
+              <div class="btn-group bootstrap-select d-block w-100">
+                <select
+                  id="arriveAfter"
+                  class="selectpicker w-100"
+                  data-live-search="false"
+                  data-live-search-style="begins"
+                  title=""
+                  tabindex="-98"
+                >
+                  <option value="">To select</option>
+                  <option value="per_day">8h</option>
+                  <option value="per_week">8:30</option>
+                  <option value="per_month">9h</option>
+                  <option value="per_hour">9:30</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <label for="">Leave before</label>
+              <div class="btn-group bootstrap-select d-block w-100">
+                <select
+                  id="leavebefore"
+                  class="selectpicker w-100"
+                  data-live-search="false"
+                  data-live-search-style="begins"
+                  title=""
+                  tabindex="-98"
+                >
+                  <option value="">To select</option>
+                  <option value="per_day">8h</option>
+                  <option value="per_week">8:30</option>
+                  <option value="per_month">9h</option>
+                  <option value="per_hour">9:30</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="">Smoking allowed?</label>
+            </div>
+            <div class="col-sm-3 mb-4">
+              <div class="form-control">
+                <input
+                  class="d-none"
+                  name="smokingallowed"
+                  id="smokingyes"
+                  type="radio"
+                />
+                <label for="smokingyes">
+                  Yes
+                  <span class="control-indicator"></span>
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-3 mb-4">
+              <div class="form-control">
+                <input
+                  class="d-none"
+                  name="smokingallowed"
+                  id="smokingno"
+                  type="radio"
+                />
+                <label for="smokingyes">
+                  No
+                  <span class="control-indicator"></span>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="">Pets allowed?</label>
+            </div>
+            <div class="col-sm-3 mb-4">
+              <div class="form-control">
+                <input
+                  class="d-none"
+                  name="petsallowed"
+                  id="petsyes"
+                  type="radio"
+                />
+                <label for="petsyes">
+                  Yes
+                  <span class="control-indicator"></span>
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-3 mb-4">
+              <div class="form-control">
+                <input
+                  class="d-none"
+                  name="petsallowed"
+                  id="petsno"
+                  type="radio"
+                />
+                <label for="petsyes">
+                  No
+                  <span class="control-indicator"></span>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="">Authorized evenings</label>
+            </div>
+            <div class="col-sm-3 mb-4">
+              <div class="form-control">
+                <input
+                  class="d-none"
+                  name="authorizedevenings"
+                  id="authorizedeveningsyes"
+                  type="radio"
+                />
+                <label for="authorizedeveningsyes">
+                  Yes
+                  <span class="control-indicator"></span>
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-3 mb-4">
+              <div class="form-control">
+                <input
+                  class="d-none"
+                  name="authorizedevenings"
+                  id="authorizedeveningsno"
+                  type="radio"
+                />
+                <label for="authorizedeveningsyes">
+                  No
+                  <span class="control-indicator"></span>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="">Children allowed?</label>
+            </div>
+            <div class="col-sm-3 mb-4">
+              <div class="form-control">
+                <input
+                  class="d-none"
+                  name="childrenallowed"
+                  id="childrenyes"
+                  type="radio"
+                />
+                <label for="childrenyes">
+                  Yes
+                  <span class="control-indicator"></span>
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-3 mb-4">
+              <div class="form-control">
+                <input
+                  class="d-none"
+                  name="childrenallowed"
+                  id="childrenno"
+                  type="radio"
+                />
+                <label for="childrenyes">
+                  No
+                  <span class="control-indicator"></span>
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-12 mb-4">
+              <label for="">Additional information (optional)</label>
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="5"
+                class="form-control"
+              ></textarea>
+            </div>
+            <div class="steps-nav col-sm-12">
+              <div>
+                <button
+                  id="save_as_draft"
+                  type="button"
+                  class="btn btn-grey-outlined btn-xs-full-width"
+                  onclick="showRulesBedrooms()"
+                >
+                  Return
+                </button>
+                <button
+                  id="save_as_draft"
+                  type="button"
+                  class="btn btn-grey-outlined btn-xs-full-width"
+                >
+                  Save as draft
+                </button>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-success btn-step-next btn-xs-full-width action"
+              >
+                To send
+              </button>
             </div>
           </div>
         </form>
@@ -1480,9 +1771,26 @@
         $(".myExtraPrices").first(".row").remove();
       }
 
+      function deleteRoomRow() {
+        $("#singleRoomInfo").first(".row").remove();
+      }
+
       function addRow() {
         if ($(".myExtraPrices").length > 0) {
           $(".myExtraPrices:last").clone().insertBefore(".deleteRowContainer");
+        } else {
+          $(".myExtraPricesTemplate")
+            .clone()
+            .insertBefore(".deleteRowContainer")
+            .removeClass("myExtraPricesTemplate")
+            .addClass("myExtraPrices")
+            .css("display", "block");
+        }
+      }
+
+      function addRoomRow() {
+        if ($("#singleRoomInfo").length > 0) {
+          $("#singleRoomInfo:last").clone().insertBefore(".deleteRowContainer");
         } else {
           $(".myExtraPricesTemplate")
             .clone()
@@ -1532,19 +1840,68 @@
       document.getElementById("homey_listing_mode").onchange = function () {
         $("#listing").slideUp("fast");
         $("#information").slideDown("slow");
+        window.scrollTo(0, 0, "slow");
       };
 
       document.getElementById("continue_to_file_upload").onclick = function () {
         $("#information").slideUp("fast");
         $("#file-upload").slideDown("fast");
+        window.scrollTo(0, 0, "slow");
       };
 
       function showInformation() {
         $("#file-upload").slideUp("fast");
         $("#information").slideDown("fast");
+        window.scrollTo(0, 0, "slow");
       }
 
-      function showCharac() {}
+      function showCharac() {
+        $("#file-upload").slideUp("fast");
+        $("#charac").slideDown("fast");
+        window.scrollTo(0, 0, "slow");
+      }
+
+      function showFileUpload() {
+        $("#charac").slideUp("fast");
+        $("#file-upload").slideDown("fast");
+        window.scrollTo(0, 0, "slow");
+      }
+
+      function showLocation() {
+        $("#charac").slideUp("fast");
+        $("#location").slideDown("fast");
+        window.scrollTo(0, 0, "slow");
+      }
+
+      function showLocationCharac() {
+        $("#charac").slideDown("fast");
+        $("#location").slideUp("fast");
+        window.scrollTo(0, 0, "slow");
+      }
+
+      function showBedroomsCharac() {
+        $("#location").slideUp("fast");
+        $("#bedrooms").slideDown("fast");
+        window.scrollTo(0, 0, "slow");
+      }
+
+      function showLocationBedrooms() {
+        $("#bedrooms").slideUp("fast");
+        $("#location").slideDown("fast");
+        window.scrollTo(0, 0, "slow");
+      }
+
+      function showBedroomsRules() {
+        $("#rules").slideDown("fast");
+        $("#bedrooms").slideUp("fast");
+        window.scrollTo(0, 0, "slow");
+      }
+
+      function showRulesBedrooms() {
+        $("#rules").slideUp("fast");
+        $("#bedrooms").slideDown("fast");
+        window.scrollTo(0, 0, "slow");
+      }
     </script>
   </body>
 </html>
